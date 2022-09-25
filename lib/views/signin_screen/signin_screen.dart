@@ -23,7 +23,7 @@ class VerificationScreen extends StatelessWidget {
           title: letsconnect.text.black.fontFamily(bold).make(),
         ),
         body: Container(
-          padding: EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(12.0),
           child: Column(
             children: [
               TextFormField(

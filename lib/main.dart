@@ -1,8 +1,10 @@
 import 'package:demo_application/consts/colors.dart';
+import 'package:demo_application/consts/consts.dart';
 import 'package:demo_application/consts/images.dart';
 import 'package:demo_application/consts/strings.dart';
 import 'package:demo_application/consts/utils.dart';
 import 'package:demo_application/views/signin_screen/signin_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';
@@ -22,8 +24,23 @@ main() async {
   runApp(const App());
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  var isUser = false;
+
+  checkUser() async {
+    auth.authStateChanges().listen((User? user) {
+      if(user == null && mounted) {
+        
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

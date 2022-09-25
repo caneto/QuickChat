@@ -72,7 +72,7 @@ class AuthController extends GetxController {
           'id':user.uid,
           'name': usernameController.text.toString(),
           'phone': phoneController.text.toString(),
-        });
+        }, SetOptions(merge: true));
 
         VxToast.show(context, msg: loggedin);
         Get.offAll(() => HomeScreen(), transition: Transition.downToUp);
