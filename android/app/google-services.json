@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "912351917975",
+    "project_id": "quickchatapp-8b738",
+    "storage_bucket": "quickchatapp-8b738.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912351917975:android:82acd0988bb9b71a0a76d2",
+        "android_client_info": {
+          "package_name": "br.com.capsistema.quickchatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912351917975-lnkhq7fk9291ok5d74g6hf1h6ns9u11b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.capsistema.quickchatapp",
+            "certificate_hash": "64a033d64596b962be679b74d8a17feefdd993b3"
+          }
+        },
+        {
+          "client_id": "912351917975-02u4gr0q8oocmekpap9r7dui0vo62sgj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyD-Xud3PAfHh_tx4glqvux1YM_L0jl8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912351917975-02u4gr0q8oocmekpap9r7dui0vo62sgj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
