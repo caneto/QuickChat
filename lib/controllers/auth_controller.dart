@@ -12,6 +12,7 @@ class AuthController extends GetxController {
 
   //Variaveis
   var isOptSent = false.obs;
+  var formKey = GlobalKey<FormState>();
 
   //auth variaveis
   late final PhoneVerificationCompleted phoneVerificationCompleted;

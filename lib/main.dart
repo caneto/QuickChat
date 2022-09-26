@@ -3,6 +3,7 @@ import 'package:demo_application/consts/consts.dart';
 import 'package:demo_application/consts/images.dart';
 import 'package:demo_application/consts/strings.dart';
 import 'package:demo_application/consts/utils.dart';
+import 'package:demo_application/views/home_screen/home.dart';
 import 'package:demo_application/views/signin_screen/signin_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -37,9 +38,21 @@ class _AppState extends State<App> {
   checkUser() async {
     auth.authStateChanges().listen((User? user) {
       if(user == null && mounted) {
-        
+        setState(() {
+          isUser = false;
+        });
+      } else {
+        setState(() {
+          isUser = true;
+        });
       }
     });
+  }
+
+  @override
+  void initStat() {
+    super.initState();
+    checkUser();
   }
 
   @override
@@ -47,7 +60,7 @@ class _AppState extends State<App> {
     return GetMaterialApp(
       theme: ThemeData(fontFamily: "mont"),
       debugShowCheckedModeBanner: false,
-      home: const ChatApp(),
+      home: isUser ? HomeScreen() : const ChatApp(),
       title: appname,
     );
   }

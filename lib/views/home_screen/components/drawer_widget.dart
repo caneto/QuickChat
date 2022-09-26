@@ -1,4 +1,5 @@
 import 'package:demo_application/consts/consts.dart';
+import 'package:demo_application/main.dart';
 import 'package:demo_application/views/views.dart';
 import 'package:get/get.dart';
 
@@ -71,8 +72,12 @@ Widget drawer() {
             ),
             title: invite.text.fontFamily(semibold).white.make(),
           ),
-          Spacer(),
+          const Spacer(),
           ListTile(
+            onTap: () async {
+              await auth.signOut();
+              Get.offAll(() => const ChatApp());
+            },
             leading: const Icon(
               logoutIcon,
               color: Colors.white,
